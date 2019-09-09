@@ -2,7 +2,7 @@
 Thank you for your time exploring this app.  
 Shuffle is a Windows Console app which generates a list of 10000 numbers in random order. 
 ## Development Environment
-.Net Framework 4.6.1
+.Net Framework 4.6.1  
 Windows Console App
 ## Run
 As requested there is no executable file included in this repository. Please start the app in Visual Studio.
