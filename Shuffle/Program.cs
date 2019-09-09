@@ -10,8 +10,8 @@ namespace Shuffle
         #region Shuffle
         
         /*
-         * Utilizing the idea of Fisher-Yates Shuffle, switch the ith number with the random
-         * jth number. i is decreasing from (length - 1) of list, 0 <= j < i
+         * Utilizing Fisher-Yates Shuffle, switch the ith number with the random
+         * jth number. Index i is decreasing from (length - 1) to 0, 0 <= j < i
         */
         private static List<int> FisherYatesShuffle(List<int> list)
         {
@@ -20,7 +20,8 @@ namespace Shuffle
 
             while (i > 1)
             {
-                var j = rnd.Next(i + 1); //.Net Random.Next(n) returns a number in [0,n).
+                // .Net Random.Next(n) returns a number in [0,n).
+                var j = rnd.Next(i + 1); 
                 
                 var temp = list[j];
                 list[j] = list[i];
