@@ -44,13 +44,19 @@ namespace Shuffle
             var randomList = Enumerable.Range(1, LIST_SIZE).ToList();
 
             randomList = FisherYatesShuffle(randomList);
-
+            
             // Debugging
             Debug.Assert(randomList.Count() == LIST_SIZE);
             Debug.Assert(randomList.Distinct().Count() == randomList.Count());
 
             var output = string.Join(", ", randomList);
             Console.WriteLine(output);
+
+            if (System.Diagnostics.Debugger.IsAttached)
+            {
+                Console.WriteLine("\nPress any key to exit...");
+                Console.ReadKey(true);
+            }
         }
 
         #endregion
